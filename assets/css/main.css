@@ -59,6 +59,9 @@ h3,
 h4 {
   font-family: 'Circe Extra Bold', sans-serif;
 }
+.status {
+  text-align: center;
+}
 .p15 {
   font-size: 1.5;
 }
@@ -217,15 +220,16 @@ h4 {
   font-size: 1em;
   /* example */
 
-  height: 4em;
+  height: 6em;
   /* example */
 
-  line-height: 2em /* the same as height */
-;
+  line-height: 2em /* the same as height */;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main .file_upload > button {
-  float: right;
-  width: 8em;
+  width: 14em;
   /* example */
 
   height: 100%;
@@ -501,9 +505,10 @@ h4 {
   margin-bottom: 9rem;
 }
 .calc h4 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   margin-bottom: 3rem;
+  padding-left: 2em;
 }
 .calc select {
   opacity: 0.6;
@@ -549,24 +554,29 @@ h4 {
 .calc .file_upload {
   position: relative;
   overflow: hidden;
-  font-size: 1em;
-  /* example */
-
-  height: 4em;
-  /* example */
-
-  line-height: 2em /* the same as height */
-;
+  height: 6em;
+  padding-left: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .calc .file_upload > button {
-  float: right;
-  width: 8em;
-  /* example */
-
+  transition: background 0.2s;
+  border-radius: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #c51abb;
+  border: 2px dashed #c51abb;
+  padding: 1.5rem;
+  width: 14em;
   height: 100%;
 }
 .calc .file_upload > div {
-  padding-left: 1em /* example */
+  padding-left: 4em /* example */
 ;
 }
 .calc .file_upload input[type=file] {
@@ -836,6 +846,7 @@ h4 {
 .feedback {
   background-color: #f7e7e6;
   padding: 9rem 0;
+  overflow: hidden;
 }
 .feedback-slider-item {
   padding-bottom: 5rem;
